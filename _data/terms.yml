@@ -63,3 +63,11 @@
   definition: People that work on or use spack.
   core: false
   usage: After the Supercomputing Birds of a Feather, the spackers got together to frolick in the streets and spread the word of spack.
+- name: spackish
+  definition: A spack language, such as the terms included on this site. More specifically, spackish refers to any spack config language. This term can also be used as an adjective to describe something that is very spack-relevant.
+  core: false
+  usage: The spackish was written beautifully, with verbose comments and clear sections.
+- name: spacktivate
+  definition: Activate a spack environment.
+  core: true
+  usage: Lou realized the binary wasn't on his path, and it was because he forgot to spacktivate his environment.
