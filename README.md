@@ -2,6 +2,8 @@
 
 [![GitHub actions status](https://github.com/spack/spackpedia/workflows/CI/badge.svg?branch=main)](https://github.com/spack/spackpedia/actions?query=branch%3Amain+workflow%3ACI)
 
+![assets/img/spackpedia.png](assets/img/spackpedia.png)
+
 ## What is the Spack Encyclopedia?
 
 Have you ever made up a special, spack specific term, like a spackage?
