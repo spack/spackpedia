@@ -15,8 +15,21 @@ spack!
 
 ## How do I contribute?
 
+There are so many ways to contribute!
+
+1. Update an existing term definition, related terms, or usage.
+2. Add an image to an existing term without one (memes are the best!)
+3. Add a completely new term.
+4. Update some design or functionality of the site (advanced)
+
 You can edit or add a new term by editing the [_data/terms.yml](_data/terms.yml)
-file. Minimally, you should add:
+file. If you want to contribute but need some help, or just want to share content
+and ask one of the maintainers here to add it, please don't hesitate to [open an issue](https://github.com/spack/spackpedia/issues).
+We're here to help!
+
+### 1. Adding or Updating a Term
+
+Minimally, you should add:
 
 ```yaml
 - name: spackage
@@ -37,5 +50,5 @@ is shown on the term's page.
 ```
 
 The image should be located in [assets/img/terms](assets/img/terms), and make sure if you use any
-quotes, you use single quotes `'` and not double `"`. 
-If you have any questions, please don't hesitate to [open an issue](https://www.github.com/spack/spackpedia/issues).
+quotes, you use single quotes `'` and not double `"`. This will be tested to make sure you don't miss anything!
+If you have any questions, or want to request more docs are written here, please don't hesitate to [open an issue](https://www.github.com/spack/spackpedia/issues).
