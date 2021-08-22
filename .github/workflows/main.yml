@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches_ignore: []
+
+jobs:
+  testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Setup environment
+        run: conda env create --quiet --name spack --file tests/test-environment.yml
+
+      - name: Run tests
+        env:
+          CI: true
+        run: |
+          export PATH="/usr/share/miniconda/bin:$PATH"
+          source activate spack
+          pytest tests/test*.py -v -x

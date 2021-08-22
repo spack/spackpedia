@@ -1,0 +1,51 @@
+# --- General options --- #
+
+baseurl: "/spackpedia"
+title: The Spack Encyclopedia of Terms
+
+# Description: Short description of your site
+description: Glossary of Terms in the Spack Universe
+author: vsoch
+repo: https://github.com/spack/spackpedia
+
+# Social Profiles
+
+# Uncomment twitter to have a feed in the right sidebar of latest tweets
+twitter:  spackpm
+github_username:  spackpm
+
+# Navigation
+navbar-links:
+  About: "about"
+  Search: "search"
+
+# DO NOT EDIT BELOW THIS LINE ##################################################
+
+logo: "assets/img/spack-logo-white.svg"
+
+# Paths
+defaults:
+    -
+        scope:
+            path: "pages"
+            type: pages
+        values:
+            layout: page
+    -
+        scope:
+            path: ""
+            type: posts
+        values:
+            layout: post
+            comments: true
+
+
+# Build settings
+permalink   : /:year/:categories/:title/
+exclude: ["_site", "vendor", ".circleci"]
+
+markdown:          kramdown
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

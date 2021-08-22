@@ -1,0 +1,61 @@
+- name: spackage
+  definition: A spack package.
+  usage: I want to use this cool new software module, but there isn't a spackage for it.
+  url: https://spack.github.io/packages
+  core: false
+  related:
+   - package
+- name: package
+  definition: A package is a Python module that describes how to build software. Packages allow the packager to encapsulate the build logic for different versions, compilers, options, platforms, and dependency combinations in one place. A package like 'trinity' for example might be normally installed with a Makefile, so if we look in var/spack/repos/builtin/packages/trinity/package.py, we will find that it uses a MakefilePackage base (superclass) with added metadata like versions and conflicts, and customizations for build and install steps. The package is somewhat abstract because it describes ranges of versions that work (or don't) and customizations. It is only when we plug a package instance into a particular solve (concretization) that we can find exact versions and details, or a more concrete specification that is appropriately called a spec. A good metaphor might be buying a car. When you see a car online (the 'package') you can see all the ranges of colors, choices for features and power, that are available. But only when you add your preferences to these constraints ('I need a 4 family car with leather seats for spills, and it needs to be compatible with my small garage') and come down with the final specification that is built, do you have your spec.
+  usage: I want to use this cool new software module, but there isn't a spackage for it.
+  url: https://spack.github.io/packages
+  core: true
+  related:
+   - spackage
+   - spec
+   - concretization
+- name: spackscendence
+  definition: when you ascend into another dimension as a result of using spack. A spack nirvana.
+  usage: Did you see Larry the first time he used spack? The install just worked, and he entered spackscendence.
+  image: spackvana.png 
+  core: false
+- name: spack
+  definition: Spack is a package management tool designed to support multiple versions and configurations of software on a wide variety of platforms and environments.
+  url: https://spack.readthedocs.io/
+  core: true
+  usage: Have you used spack? I hear it's a cool package manager for HPC.
+- name: spec
+  definition: Is an expression for describing builds of software. If you start with an abstract package, you'll know the overall dependencies and conflicts that exist. But you won't know the exact concretized, final specification for your particular environment. This is the spec. It's the exact list of versions, and more than that, <i>hashes</i>, that can make the install reproducible. 
+  url: https://spack.readthedocs.io/en/latest/packaging_guide.html
+  core: true
+  usage: Can you send me the package spec so I can see how it was ultimately built?
+  related:
+   - package
+- name: concretization
+  definition: When you start with an abstract package and you want a specific set of build instructions, the concretization step is when you run the internal spack solver to come up with the exact build, or spec, for the package on your system. 
+  url: https://spack.readthedocs.io/en/latest/packaging_guide.html#concretization-policies
+  core: true
+  usage: Howard could not see how the package would be installed until he ran spack concretize.
+  related:
+   - package
+   - spec
+- name: build-cache
+  definition: A build cache is exactly what it sounds like - a cache where you can store compressed archives of installed packages, either to re-use later, or make some shared resource for others to quickly install from. Building from source takes time, but downloading a pre-build binary is much faster! So build caches reduces the load of recompiling otherwise identical package specs in different installations, as installed packages can be put into build cache tarballs, uploaded to your Spack mirror and then downloaded and installed by others.
+  url: https://spack.readthedocs.io/en/latest/binary_caches.html
+  core: true
+  usage: Maria hated waiting for source installs, so she decided to make a build cache for her center so others wouldn't face the same annoyance.
+  related:
+   - package
+   - mirror
+- name: mirror
+  definition: A mirror is a URL that points to a directory, either on the local filesystem or on some server, containing tarballs for all of Spack’s packages. This resource is called a build cache, but when used is called a mirror.
+  url: https://spack.readthedocs.io/en/latest/mirrors.html
+  core: true
+  usage: After Maria made a build cache, she make it into a mirror by putting it behind a web server and accessible URL.
+  related:
+   - package
+   - build-cache
+- name: spacktacular
+  definition: A spectacular occurrence in the spack community.
+  core: false
+  usage: After Todd added the new concretizer there was a moment of silence. It was spacktaclar!
