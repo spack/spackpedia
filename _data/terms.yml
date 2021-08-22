@@ -59,7 +59,7 @@
   definition: A spectacular occurrence in the spack community.
   core: false
   usage: After Todd added the new concretizer there was a moment of silence. It was spacktaclar!
-- name: spackers
-  definition: People that work on or use spack.
+- name: spackager
+  definition: People that work on or use spack, specifically working on spack packages.
   core: false
-  usage: After the Supercomputing Birds of a Feather, the spackers got together to frolick in the streets and spread the word of spack.
+  usage: After the Supercomputing Birds of a Feather, the spackagers got together to frolick in the streets and spread the word of spack.
